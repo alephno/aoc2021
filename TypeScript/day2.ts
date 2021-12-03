@@ -62,7 +62,7 @@ const startingOrientation: SubmarineOrientation = { aim: 0,  depth: 0, horizonta
 const finalOrientation = instructions.reduce((orientation: SubmarineOrientation, instruction: Instruction) => {
   const taggedInstruction = tagInstruction(instruction);
   return executeInstruction(taggedInstruction, orientation);
-}, startingOrientation)
+}, startingOrientation);
 
 const solution = (orientation: SubmarineOrientation) => orientation.horizontal * orientation.depth;
 
